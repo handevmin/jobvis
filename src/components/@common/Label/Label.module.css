@@ -1,0 +1,10 @@
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.required::after {
+  content: "*";
+  margin-left: 0.25rem;
+  color: var(--blue);
+}

@@ -1,0 +1,36 @@
+.box {
+  width: var(--pc-main-width);
+  background: var(--white);
+  border: 1px solid var(--gray-003);
+  padding: 1.875rem 1.25rem;
+  background-color: var(--white);
+}
+
+.narrow {
+  width: var(--pc-main-width-narrow);
+}
+
+.title {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.title-with-children {
+  margin: 0.875rem 0 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .box {
+    width: calc(100vw - 1rem);
+  }
+
+  .narrow {
+    width: var(--pc-main-width-narrow);
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .narrow {
+    width: calc(100vw - 1rem);
+  }
+}

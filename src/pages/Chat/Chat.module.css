@@ -1,0 +1,86 @@
+.bottomContainer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.textInput {
+    height:50px;
+    display:flex;
+}
+
+.button {
+    background-color:"black";
+    height: 100%;
+}
+.stopButton{
+    height: 100%;
+    animation: opacity 1.3s linear infinite;
+}
+@keyframes opacity {
+    0%, 100% {opacity:0.5;}
+    50% {opacity:1;}
+}
+
+.chatHeader {
+    display:flex;
+    top:0;
+    position:sticky;
+}
+
+.chatBody {
+    flex: 1;
+    display:flex;
+    overflow :hidden;
+}
+
+.chatContainer {
+    overflow-y:auto;
+    flex-direction:column;
+    flex:1;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:relative;
+}
+
+.chatList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom:60px;
+}
+
+.chatMessage {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color:bisque;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-width: 1px;
+}
+
+.chatMessageContext {
+    max-width:38rem;
+    margin:15px;
+    width:calc(100%-50px);
+}
+
+.userMessage {
+    background-color: #f2f2f2;
+}
+
+.botMessage {
+    background-color:#e2e6fa;
+}
+
+@media screen and (max-width: 800px) {
+
+}
+  
+@media screen and (max-width: 512px) {
+
+}

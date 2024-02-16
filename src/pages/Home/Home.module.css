@@ -100,3 +100,57 @@
 @media screen and (max-width: 767px){
 	
 }
+
+
+.hero_section {
+  position: relative;
+  text-align: center; /* 텍스트를 센터 정렬 */
+  color: black; /* 텍스트 색상을 흰색으로 설정 */
+  top: 0%;
+}
+
+.hero_image {
+  width: 100%;
+  height: auto;
+  opacity: 0.5; /* 배경 이미지 투명도 조절 */
+}
+
+.hero_content {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 요소를 정중앙에 배치 */
+  width: 100%; /* 너비를 100%로 설정하여 가운데 정렬 */
+    /* 텍스트 주변에 반투명 배경 추가 */
+    background: rgba(255, 255, 255, 0.75); /* 흰색 반투명 배경 */
+    padding: 20px; /* 패딩 추가 */
+}
+
+.title {
+  /* 제목 스타일 */
+  font-size: 2em; /* 폰트 크기 조정 */
+  margin-top: 1.2em; /* 여백 조정 */
+  margin-bottom: 0.9em; /* 여백 조정 */
+  color: #444; /* 텍스트 색상을 흰색으로 설정 */
+
+}
+
+.description {
+  /* 설명 텍스트 스타일 */
+  font-size: 1.2em; /* 폰트 크기 조정 */
+  margin-bottom: 1em; /* 여백 조정 */
+  line-height:1.5;
+  color: #666; /* 텍스트 색상을 흰색으로 설정 */
+
+}
+
+.cta_button {
+  /* width: fit-content; */
+  background-color: #434343;
+  width:150px;
+  height:40px;
+  font-size:15px;
+  font-weight: bold;
+  margin-bottom: 1.5em; /* 여백 조정 */
+
+}

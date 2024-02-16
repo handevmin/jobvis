@@ -172,23 +172,23 @@ const Chat = () => {
         "user": userId,
         "content": content
       }).then(async(response)=>{
-        console.log(response.data);
         let events = null;
-        if (response.data.event_info !== null){
-            events = await response.data.event_info.map((el)=>{
-              console.log(el);
-              const {start, end, ...event} = el;
-              const [sdate, stime] = start.dateTime.split("T")
-              const [edate, etime] = end.dateTime.split("T")
-              event["sdate"] = sdate;
-              event["stime"] = stime.substr(0, 8);
-              event["edate"] = edate;
-              event["etime"] = etime.substr(0, 8);
-              return event;
-          })
-          console.log(events);
-        }
-       
+
+        // if (response.data.event_info) {
+        //   // event_info가 객체인 경우 처리
+        //   const { date, time, where, whom, why } = response.data.event_info;
+        //   const eventInfo = response.data.event_info;
+        //   events = [{
+        //     sdate: eventInfo.start.dateTime.split("T")[0],
+        //     stime: eventInfo.start.dateTime.split("T")[1].substr(0, 8),
+        //     edate: eventInfo.end.dateTime.split("T")[0],
+        //     etime: eventInfo.end.dateTime.split("T")[1].substr(0, 8),
+        //     summary: `장소: ${where}, 누구와: ${whom}, 무엇을: ${why}` // 내용
+        //   }];
+        // } else {
+        //   // event_info가 없는 경우의 처리
+        //   console.error('event_info is missing:', response.data);
+        // }
         setContext((context)=>{
           const newList = [...context];
           newList.pop();
@@ -233,10 +233,12 @@ const Chat = () => {
         </div>
         <div className={styles.bottomContainer}>
           <div style={{display:"flex",justifyContent:"center"}}>
-            <Button 
-                style={{backgroundColor:"#ffffff", opacity:"0.5", color:"black"}}
-                onClick={()=>handleResetButton()}
-              >Reset</Button>
+          {/* <Button 
+          className={styles.resetButton} // 스타일 클래스 변경
+          onClick={handleResetButton}
+        >
+          Reset
+        </Button> */}
           </div>
           {audio ? (
           <div style={{display:'none', justifyContent:"center"}}>

@@ -1,12 +1,12 @@
 .box {
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 4.5rem;
+  height: 4rem;
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -16,7 +16,7 @@
   color: #000;
   z-index: var(--header-z-index);
   border-bottom:solid;
-  border-color:#1c2c4c;
+  border-color:#888;
 }
 
 .content {
